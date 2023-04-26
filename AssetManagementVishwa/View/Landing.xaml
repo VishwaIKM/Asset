@@ -7,8 +7,51 @@
         xmlns:local="clr-namespace:AssetManagementVishwa.View"
         xmlns:navpos="clr-namespace:AssetManagementVishwa.View.CustomControl"
         mc:Ignorable="d"
-        Title="Landing" Height="450" Width="800">
+        Title="Landing" Height="1080" Width="1920">
     <Grid>
+        <materialDesign:Card Margin="10" UniformCornerRadius="15">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0.8*"/>
+                    <ColumnDefinition Width="15*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.Resources>
+                    <Style TargetType="materialDesign:PackIcon">
+                        <Setter Property="Width" Value="40"></Setter>
+                        <Setter Property="Height" Value="40"></Setter>
+                    </Style>
+                </Grid.Resources>
+                <Grid Grid.Column="0" HorizontalAlignment="Center">
+                    <!--<Path Stretch="Uniform" Margin="0,10,0,0" VerticalAlignment="Top"  Fill="#2a84f1" Height="25" Width="25" Data="M 80,200 A 100,50 45 1 0 100,50"/> -->
+
+                    <ListBox Grid.Column="0" VerticalAlignment="Top" HorizontalAlignment="Center" SelectionMode="Single"  SelectionChanged="sidebar_SelectionChanged" Margin="0 70" x:Name="sidebar"  BorderThickness="0">
+
+                        <navpos:NavButton Navlink="View/Pages/Dashboard.xaml" Style="{StaticResource MaterialDesignNavigationListBoxItem}" Margin="0 " Padding="0">
+                            <materialDesign:PackIcon Kind="Home" Cursor="Hand"/>
+                        </navpos:NavButton>
+                        <navpos:NavButton Navlink="View/Pages/NewEntry.xaml" Style="{StaticResource MaterialDesignNavigationListBoxItem}" Margin="0 5" Padding="0">
+                            <materialDesign:PackIcon Kind="Add" Cursor="Hand"/>
+                        </navpos:NavButton>
+                        <navpos:NavButton Navlink="View/Pages/UpdateEntry.xaml" Style="{StaticResource MaterialDesignNavigationListBoxItem}" Margin="0 0" Padding="0">
+                            <materialDesign:PackIcon Kind="Edit" Cursor="Hand"/>
+                        </navpos:NavButton>
+                        <navpos:NavButton Navlink="View/Pages/Audit.xaml" Style="{StaticResource MaterialDesignNavigationListBoxItem}" Margin="0 5" Padding="0">
+                            <materialDesign:PackIcon Kind="History" Cursor="Hand"/>
+                        </navpos:NavButton>
+                        <navpos:NavButton Navlink="View/Pages/Dashboard.xaml" Style="{StaticResource MaterialDesignNavigationListBoxItem}" Margin="0 0" Padding="0">
+                            <materialDesign:PackIcon Kind="Report" Cursor="Hand"/>
+                        </navpos:NavButton>
+                    </ListBox>
+                </Grid>
+                <Frame Grid.Column="1" x:Name="navframe" NavigationUIVisibility="Hidden" Background="AliceBlue"/>
+            </Grid>
+            
+        </materialDesign:Card>
+        
+    </Grid>
+
+
+    <!--<Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="50"/>
             <ColumnDefinition />
@@ -27,5 +70,5 @@
 
         <Frame Grid.Column="1" x:Name="navframe" NavigationUIVisibility="Hidden" Background="#e9ecef"/>
 
-    </Grid>
+    </Grid>-->
 </Window>
