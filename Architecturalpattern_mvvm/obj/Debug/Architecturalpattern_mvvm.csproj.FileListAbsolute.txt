@@ -4,3 +4,9 @@ D:\WorkSpace\AssetManagement_VISHWA\AssetManagementVishwa\Architecturalpattern_m
 D:\WorkSpace\AssetManagement_VISHWA\AssetManagementVishwa\Architecturalpattern_mvvm\obj\Debug\Architecturalpattern_mvvm.csproj.CoreCompileInputs.cache
 D:\WorkSpace\AssetManagement_VISHWA\AssetManagementVishwa\Architecturalpattern_mvvm\obj\Debug\Architecturalpattern_mvvm.dll
 D:\WorkSpace\AssetManagement_VISHWA\AssetManagementVishwa\Architecturalpattern_mvvm\obj\Debug\Architecturalpattern_mvvm.pdb
+C:\Users\vishw\OneDrive\Documents\WORKSPACE\Asset\Architecturalpattern_mvvm\bin\Debug\Architecturalpattern_mvvm.dll
+C:\Users\vishw\OneDrive\Documents\WORKSPACE\Asset\Architecturalpattern_mvvm\bin\Debug\Architecturalpattern_mvvm.pdb
+C:\Users\vishw\OneDrive\Documents\WORKSPACE\Asset\Architecturalpattern_mvvm\obj\Debug\Architecturalpattern_mvvm.csproj.AssemblyReference.cache
+C:\Users\vishw\OneDrive\Documents\WORKSPACE\Asset\Architecturalpattern_mvvm\obj\Debug\Architecturalpattern_mvvm.csproj.CoreCompileInputs.cache
+C:\Users\vishw\OneDrive\Documents\WORKSPACE\Asset\Architecturalpattern_mvvm\obj\Debug\Architecturalpattern_mvvm.dll
+C:\Users\vishw\OneDrive\Documents\WORKSPACE\Asset\Architecturalpattern_mvvm\obj\Debug\Architecturalpattern_mvvm.pdb

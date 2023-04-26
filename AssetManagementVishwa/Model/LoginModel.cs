@@ -3,6 +3,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace AssetManagementVishwa.Model
 {
+    [Table("USR_MAIN")]
     internal class LoginModel
     {
         [Key]
