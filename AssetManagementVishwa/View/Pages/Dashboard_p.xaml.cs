@@ -1,17 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
+﻿using LiveCharts.Wpf;
+using LiveCharts;
+using System;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace AssetManagementVishwa.View.Pages
 {
@@ -23,6 +13,21 @@ namespace AssetManagementVishwa.View.Pages
         public Dashboard_p()
         {
             InitializeComponent();
+            PointLabel = chartPoint =>
+              string.Format("{0} ({1:P})", chartPoint.Y, chartPoint.Participation);
+        }
+        public Func<ChartPoint, string> PointLabel { get; set; }
+        private void Chart_OnDataClick(object sender, LiveCharts.ChartPoint chartPoint)
+        {
+
+            var chart = (PieChart)chartPoint.ChartView;
+
+            //clear selected slice.
+            foreach (PieSeries series in chart.Series)
+                series.PushOut = 0;
+
+            var selectedSeries = (PieSeries)chartPoint.SeriesView;
+            selectedSeries.PushOut = 8;
         }
     }
 }

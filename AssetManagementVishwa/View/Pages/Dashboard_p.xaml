@@ -5,10 +5,15 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
       xmlns:local="clr-namespace:AssetManagementVishwa.View.Pages"
+      xmlns:lvc="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf"
+      xmlns:Dashboardvm="clr-namespace:AssetManagementVishwa.ViewModel"
       mc:Ignorable="d" 
       Background="#f2e7e6"
       d:DesignHeight="450" d:DesignWidth="800"
       Title="Dashboard">
+    <Page.DataContext>
+        <Dashboardvm:Dashboard_vm/>
+    </Page.DataContext>
 
     <Grid>
         <ScrollViewer>
@@ -25,20 +30,85 @@
                     <ColumnDefinition Width="1*"/>
                     <ColumnDefinition Width="1*"/>
                     <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="1*"/>
                 </Grid.ColumnDefinitions>
-                
-                <!-- Code -->
-                <Rectangle Margin="5" Fill="White" RadiusX="10" RadiusY="10"/>
-                <Grid Margin="15 10">
-                    <Grid Width="30" Height="50" Background="Brown" HorizontalAlignment="Left" VerticalAlignment="Top">
+
+                <!-- Code row 0 col 0-->
+                <Rectangle Margin="7" Fill="White" RadiusX="10" RadiusY="10"/>
+                <Grid Margin="15 8">
+                    <Grid Width="40" Height="70" Background="LightGoldenrodYellow" HorizontalAlignment="Left" VerticalAlignment="Top">
                         <Grid.Effect>
                             <DropShadowEffect BlurRadius="20" Color="#FFEAE4E4"/>
                         </Grid.Effect>
                         <materialDesign:PackIcon Kind="Server" VerticalAlignment="Bottom" HorizontalAlignment="Center" Background="White"/>
                     </Grid>
                     <TextBlock Text="Total Server" HorizontalAlignment="Right" FontSize="18" FontStyle="Italic"/>
-
+                    <TextBlock Text="12" HorizontalAlignment="Right" VerticalAlignment="Bottom" FontSize="33" FontStyle="Italic"/>
                 </Grid>
+
+                <!-- Code row 0 col 1-->
+                <Grid Grid.Column="1" Grid.Row="0">
+                    <Rectangle Margin="7" Fill="White" RadiusX="10" RadiusY="10"/>
+                    <Grid Margin="15 8">
+                        <Grid Width="40" Height="70" Background="LightBlue" HorizontalAlignment="Left" VerticalAlignment="Top">
+                            <Grid.Effect>
+                                <DropShadowEffect BlurRadius="20" Color="#FFEAE4E4"/>
+                            </Grid.Effect>
+                            <materialDesign:PackIcon Kind="DesktopWindows" VerticalAlignment="Bottom" HorizontalAlignment="Center" Background="White"/>
+                        </Grid>
+                        <TextBlock Text="Total Desktop" HorizontalAlignment="Right" FontSize="18" FontStyle="Italic"/>
+                        <TextBlock Text="155" HorizontalAlignment="Right" VerticalAlignment="Bottom" FontSize="33" FontStyle="Italic"/>
+                    </Grid>
+                </Grid>
+
+                <!-- Code row 0 col 2-->
+                <Grid Grid.Column="2" Grid.Row="0">
+                    <Rectangle Margin="7" Fill="White" RadiusX="10" RadiusY="10"/>
+                    <Grid Margin="15 8">
+                        <Grid Width="40" Height="70" Background="LightSkyBlue" HorizontalAlignment="Left" VerticalAlignment="Top">
+                            <Grid.Effect>
+                                <DropShadowEffect BlurRadius="20" Color="#FFEAE4E4"/>
+                            </Grid.Effect>
+                            <materialDesign:PackIcon Kind="ReceiptPending" VerticalAlignment="Bottom" HorizontalAlignment="Center" Background="White"/>
+                        </Grid>
+                        <TextBlock Text="Pending Request" HorizontalAlignment="Right" FontSize="18" FontStyle="Italic"/>
+                        <TextBlock Text="1" HorizontalAlignment="Right" VerticalAlignment="Bottom" FontSize="33" FontStyle="Italic" Foreground="Red"/>
+                    </Grid>
+                </Grid>
+
+                <!-- Code row 0 col 3-->
+                <Grid Grid.Column="3" Grid.Row="0">
+                    <Rectangle Margin="7" Fill="White" RadiusX="10" RadiusY="10"/>
+                    <Grid Margin="15 8">
+                        <Grid Width="40" Height="70" Background="LightCoral" HorizontalAlignment="Left" VerticalAlignment="Top">
+                            <Grid.Effect>
+                                <DropShadowEffect BlurRadius="20" Color="#FFEAE4E4"/>
+                            </Grid.Effect>
+                            <materialDesign:PackIcon Kind="Historic" VerticalAlignment="Bottom" HorizontalAlignment="Center" Background="White"/>
+                        </Grid>
+                        <TextBlock Text="Approved Request" HorizontalAlignment="Right" FontSize="18" FontStyle="Italic"/>
+                        <TextBlock Text="11" HorizontalAlignment="Right" VerticalAlignment="Bottom" FontSize="33" FontStyle="Italic" Foreground="Green"/>
+                    </Grid>
+                </Grid>
+
+                <Grid Grid.Column="0" Grid.Row="1" Grid.RowSpan="2" Grid.ColumnSpan="2">
+                    <!--<lvc:PieChart Series="{Binding Series}"/>  LabelPoint="{Binding PointLabel}" -->
+                    <lvc:PieChart LegendLocation="Bottom" DataClick="Chart_OnDataClick" Hoverable="False">
+                        <lvc:PieChart.Series>
+                            <lvc:PieSeries Title="Windows 11" Values="3" DataLabels="True"
+                              />
+                            <lvc:PieSeries Title="Windows 10" Values="4" DataLabels="True" 
+                              />
+                            <lvc:PieSeries Title="Windows 8" Values="6" DataLabels="True" 
+                              />
+                            <lvc:PieSeries Title="Windows 7" Values="2" DataLabels="True" 
+                               />
+                        </lvc:PieChart.Series>
+                    </lvc:PieChart>
+                    <TextBlock Text="Runing OS Chart" HorizontalAlignment="Right" VerticalAlignment="Top" FontSize="14" FontStyle="Italic"/>
+                </Grid>
+                
+
             </Grid>
         </ScrollViewer>
 
