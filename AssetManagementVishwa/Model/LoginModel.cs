@@ -4,9 +4,9 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace AssetManagementVishwa.Model
 {
     [Table("USR_MAIN")]
-    internal class LoginModel
+    public class LoginModel
     {
-        [Key]
+        //[Key]
         //[Required(ErrorMessage = "Please Enter UserId")]
         //[Display(Name = "Please Enter UserId")]
         [Column("USR_ID",Order =0)]

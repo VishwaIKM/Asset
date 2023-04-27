@@ -92,38 +92,48 @@
     <Compile Include="General\ErrorMessage.cs" />
     <Compile Include="General\Logger.cs" />
     <Compile Include="Model\LoginModel.cs" />
-    <Compile Include="ViewModel\Audit.cs" />
-    <Compile Include="ViewModel\Dashboard.cs" />
-    <Compile Include="ViewModel\Landing.cs" />
-    <Compile Include="ViewModel\Loading.cs" />
-    <Compile Include="ViewModel\Login.cs" />
-    <Compile Include="ViewModel\NewEntry.cs" />
-    <Compile Include="ViewModel\Report.cs" />
-    <Compile Include="ViewModel\UpdateEntry.cs" />
+    <Compile Include="ViewModel\AdminDashboard_vm.cs" />
+    <Compile Include="ViewModel\Audit_vm.cs" />
+    <Compile Include="ViewModel\Dashboard_vm.cs" />
+    <Compile Include="ViewModel\Landing_vm.cs" />
+    <Compile Include="ViewModel\Loading_vm.cs" />
+    <Compile Include="ViewModel\Login_vm.cs" />
+    <Compile Include="ViewModel\NewEntry_vm.cs" />
+    <Compile Include="ViewModel\Report_vm.cs" />
+    <Compile Include="ViewModel\UpdateEntry_vm.cs" />
     <Compile Include="View\CustomControl\NavButton.cs" />
-    <Compile Include="View\Landing.xaml.cs">
-      <DependentUpon>Landing.xaml</DependentUpon>
+    <Compile Include="View\Landing_v.xaml.cs">
+      <DependentUpon>Landing_v.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\Loading.xaml.cs">
-      <DependentUpon>Loading.xaml</DependentUpon>
+    <Compile Include="View\Loading_v.xaml.cs">
+      <DependentUpon>Loading_v.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\Login.xaml.cs">
-      <DependentUpon>Login.xaml</DependentUpon>
+    <Compile Include="View\Login_v.xaml.cs">
+      <DependentUpon>Login_v.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\Pages\Audit.xaml.cs">
-      <DependentUpon>Audit.xaml</DependentUpon>
+    <Compile Include="View\Pages\AdminDashboard_p.xaml.cs">
+      <DependentUpon>AdminDashboard_p.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\Pages\Dashboard.xaml.cs">
-      <DependentUpon>Dashboard.xaml</DependentUpon>
+    <Compile Include="View\Pages\Audit_p.xaml.cs">
+      <DependentUpon>Audit_p.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\Pages\NewEntry.xaml.cs">
-      <DependentUpon>NewEntry.xaml</DependentUpon>
+    <Compile Include="View\Pages\Dashboard_p.xaml.cs">
+      <DependentUpon>Dashboard_p.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\Pages\Report.xaml.cs">
-      <DependentUpon>Report.xaml</DependentUpon>
+    <Compile Include="View\Pages\NewEntry_p.xaml.cs">
+      <DependentUpon>NewEntry_p.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\Pages\UpdateEntry.xaml.cs">
-      <DependentUpon>UpdateEntry.xaml</DependentUpon>
+    <Compile Include="View\Pages\Report_p.xaml.cs">
+      <DependentUpon>Report_p.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Pages\UpdateEntry_p.xaml.cs">
+      <DependentUpon>UpdateEntry_p.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Testing.xaml.cs">
+      <DependentUpon>Testing.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Testing1.xaml.cs">
+      <DependentUpon>Testing1.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -155,35 +165,47 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
-    <Page Include="View\Landing.xaml">
+    <Page Include="View\Landing_v.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="View\Loading.xaml">
+    <Page Include="View\Loading_v.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="View\Login.xaml">
+    <Page Include="View\Login_v.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="View\Pages\Audit.xaml">
+    <Page Include="View\Pages\AdminDashboard_p.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="View\Pages\Dashboard.xaml">
+    <Page Include="View\Pages\Audit_p.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="View\Pages\NewEntry.xaml">
+    <Page Include="View\Pages\Dashboard_p.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="View\Pages\Report.xaml">
+    <Page Include="View\Pages\NewEntry_p.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="View\Pages\UpdateEntry.xaml">
+    <Page Include="View\Pages\Report_p.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Pages\UpdateEntry_p.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Testing.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Testing1.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
