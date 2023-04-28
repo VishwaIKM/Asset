@@ -4,12 +4,303 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:AssetManagementVishwa.View.Pages"
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="NewEntry">
-
+      Background="#f2e7e6"
+      xmlns:NewEntry="clr-namespace:AssetManagementVishwa.ViewModel"
+      Title="Add New Asset">
+    <Page.DataContext>
+        <NewEntry:NewEntry_vm/>
+    </Page.DataContext>
     <Grid>
-        <Button Content="NewEntry su" HorizontalAlignment="Left" Margin="283,248,0,0" VerticalAlignment="Top"/>
+        <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="1*"/>
+                </Grid.ColumnDefinitions>
 
+                <Grid Grid.ColumnSpan="3" Grid.Row="0">
+                    <StackPanel>
+                        <TextBlock Text="New Asset Form: " Margin="1" FontSize="24" FontWeight="Bold"/>
+                        <Separator/>
+                        <TextBlock  Text="Hardware Information*" FontWeight="DemiBold" FontSize="20"/>
+                    </StackPanel>
+                    <StackPanel Margin="0 70 0 0">
+                        <StackPanel Orientation="Horizontal" Margin="10">
+                            <TextBlock Text="System Model  : " Margin="4" FontSize="16" Foreground="DarkMagenta"/>
+                            <ComboBox 
+                                IsEditable="True" 
+                                Height="27" 
+                                Width="146"
+                                ItemsSource="{Binding Items}"
+                                SelectedItem="{Binding SelectedItem}"
+                                Text="{Binding NewItem, UpdateSourceTrigger=LostFocus}"/>
+
+                            <TextBlock Text="System CPU  : " Margin="20 4" FontSize="16" Foreground="DarkMagenta"/>
+                            <ComboBox 
+                                IsEditable="True" 
+                                Height="27" 
+                                Width="146"
+                                ItemsSource="{Binding Items}"
+                                SelectedItem="{Binding SelectedItem}"
+                                Text="{Binding NewItem, UpdateSourceTrigger=LostFocus}"/>
+
+                            <TextBlock Text="System HDD  : " Margin="20 4" FontSize="16" Foreground="DarkMagenta"/>
+                            <ComboBox 
+                                IsEditable="True" 
+                                Height="27" 
+                                Width="146"
+                                ItemsSource="{Binding Items}"
+                                SelectedItem="{Binding SelectedItem}"
+                                Text="{Binding NewItem, UpdateSourceTrigger=LostFocus}"/>
+
+                            <TextBlock Text="System SDD  : " Margin="20 4" FontSize="16" Foreground="DarkMagenta"/>
+                            <ComboBox 
+                                IsEditable="True" 
+                                Height="27" 
+                                Width="146"
+                                ItemsSource="{Binding Items}"
+                                SelectedItem="{Binding SelectedItem}"
+                                Text="{Binding NewItem, UpdateSourceTrigger=LostFocus}"/>
+                        </StackPanel>
+
+                        <StackPanel 
+                            Orientation="Horizontal"
+                            Margin="10"
+                            >
+                            <TextBlock Text="System RAM    : " Margin="4" FontSize="16" Foreground="DarkMagenta"/>
+                            <ComboBox 
+                                IsEditable="True" 
+                                Height="27" 
+                                Width="146"
+                                ItemsSource="{Binding Items}"
+                                SelectedItem="{Binding SelectedItem}"
+                                Text="{Binding NewItem, UpdateSourceTrigger=LostFocus}"/>
+                            
+                        </StackPanel>
+                        <Separator/>
+                        <TextBlock  Text="Software Information*" FontWeight="DemiBold" FontSize="20"/>
+                        <StackPanel Orientation="Horizontal" Margin="10">
+                            
+                            <TextBlock Text="Server/Desktop : " Margin="4" FontSize="16" Foreground="DarkMagenta"/>
+                            <ComboBox 
+                                IsEditable="True" 
+                                Height="27" 
+                                Width="146"
+                                ItemsSource="{Binding Items}"
+                                SelectedItem="{Binding SelectedItem}"
+                                Text="{Binding NewItem, UpdateSourceTrigger=LostFocus}"/>
+
+                            <TextBlock Text="Pre Loaded OS : " Margin="20 4" FontSize="16" Foreground="DarkMagenta"/>
+                            <ComboBox 
+                                IsEditable="True" 
+                                Height="27" 
+                                Width="146"
+                                ItemsSource="{Binding Items}"
+                                SelectedItem="{Binding SelectedItem}"
+                                Text="{Binding NewItem, UpdateSourceTrigger=LostFocus}"/>
+
+
+                            <TextBlock Text="Runing OS : " Margin="20 4" FontSize="16" Foreground="DarkMagenta"/>
+                            <ComboBox 
+                                IsEditable="True" 
+                                Height="27" 
+                                Width="146"
+                                ItemsSource="{Binding Items}"
+                                SelectedItem="{Binding SelectedItem}"
+                                Text="{Binding NewItem, UpdateSourceTrigger=LostFocus}"/>
+
+                            <TextBlock Text="OFFICE  : " Margin="20 4" FontSize="16" Foreground="DarkMagenta"/>
+                            <ComboBox 
+                                IsEditable="True" 
+                                Height="27" 
+                                Width="146"
+                                ItemsSource="{Binding Items}"
+                                SelectedItem="{Binding SelectedItem}"
+                                Text="{Binding NewItem, UpdateSourceTrigger=LostFocus}"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal" Margin="10">
+
+                            <TextBlock Text="Visual Studio     : " Margin="4" FontSize="16" Foreground="DarkMagenta"/>
+                            <ComboBox 
+                                IsEditable="True" 
+                                Height="27" 
+                                Width="146"
+                                ItemsSource="{Binding Items}"
+                                SelectedItem="{Binding SelectedItem}"
+                                Text="{Binding NewItem, UpdateSourceTrigger=LostFocus}"/>
+
+                            <TextBlock Text="SQL   : " Margin="20 4" FontSize="16" Foreground="DarkMagenta"/>
+                            <ComboBox 
+                                IsEditable="True" 
+                                Height="27" 
+                                Width="146"
+                                ItemsSource="{Binding Items}"
+                                SelectedItem="{Binding SelectedItem}"
+                                Text="{Binding NewItem, UpdateSourceTrigger=LostFocus}"/>
+
+
+                            <TextBlock Text="W CAL : " Margin="20 4" FontSize="16" Foreground="DarkMagenta"/>
+                            <ComboBox 
+                                IsEditable="True" 
+                                Height="27" 
+                                Width="146"
+                                ItemsSource="{Binding Items}"
+                                SelectedItem="{Binding SelectedItem}"
+                                Text="{Binding NewItem, UpdateSourceTrigger=LostFocus}"/>
+
+                            <TextBlock Text="RDP  : " Margin="20 4" FontSize="16" Foreground="DarkMagenta"/>
+                            <ComboBox 
+                                IsEditable="True" 
+                                Height="27" 
+                                Width="146"
+                                ItemsSource="{Binding Items}"
+                                SelectedItem="{Binding SelectedItem}"
+                                Text="{Binding NewItem, UpdateSourceTrigger=LostFocus}"/>
+                        </StackPanel>
+
+                        <StackPanel Orientation="Horizontal" Margin="10">
+
+                            <TextBlock Text="SQL CAL   : " Margin="4" FontSize="16" Foreground="DarkMagenta"/>
+                            <ComboBox 
+                                IsEditable="True" 
+                                Height="27" 
+                                Width="146"
+                                ItemsSource="{Binding Items}"
+                                SelectedItem="{Binding SelectedItem}"
+                                Text="{Binding NewItem, UpdateSourceTrigger=LostFocus}"/>
+                        </StackPanel>
+                        <Separator/>
+
+                        <TextBlock  Text="System Information*" FontWeight="DemiBold" FontSize="20"/>
+                        <StackPanel Orientation="Horizontal" Margin="10">
+
+                            <TextBlock Text="Assign User : " Margin="4" FontSize="16" Foreground="DarkMagenta"/>
+                            <TextBox
+                                Height="27" 
+                                Width="146"
+                                Text="{Binding SysUser}"/>
+
+                            <TextBlock Text="Department : " Margin="20 4" FontSize="16" Foreground="DarkMagenta"/>
+                            <ComboBox 
+                                IsEditable="True" 
+                                Height="27" 
+                                Width="146"
+                                ItemsSource="{Binding Items}"
+                                SelectedItem="{Binding SelectedItem}"
+                                Text="{Binding NewItem, UpdateSourceTrigger=LostFocus}"/>
+                            <TextBlock Text="Status Information: " Margin="20 4" FontSize="16" Foreground="DarkMagenta"/>
+                            <ComboBox 
+                                IsEditable="True" 
+                                Height="27" 
+                                Width="146"
+                                ItemsSource="{Binding Items}"
+                                SelectedItem="{Binding SelectedItem}"
+                                Text="{Binding NewItem, UpdateSourceTrigger=LostFocus}"/>
+                            <TextBlock Text="Usage : " Margin="20 4" FontSize="16" Foreground="DarkMagenta"/>
+                            <ComboBox 
+                                IsEditable="True" 
+                                Height="27" 
+                                Width="146"
+                                ItemsSource="{Binding Items}"
+                                SelectedItem="{Binding SelectedItem}"
+                                Text="{Binding NewItem, UpdateSourceTrigger=LostFocus}"/>
+                        </StackPanel>
+                        
+                        <StackPanel Orientation="Horizontal" Margin="10">
+
+                            <TextBlock Text="Purchase Value : " Margin="4" FontSize="16" Foreground="DarkMagenta"/>
+                            <ComboBox 
+                                IsEditable="True" 
+                                Height="27" 
+                                Width="146"
+                                ItemsSource="{Binding Items}"
+                                SelectedItem="{Binding SelectedItem}"
+                                Text="{Binding NewItem, UpdateSourceTrigger=LostFocus}"/>
+
+                            <TextBlock Text="Purchase Year  : " Margin="20 4" FontSize="16" Foreground="DarkMagenta"/>
+                            <ComboBox 
+                                IsEditable="True" 
+                                Height="27" 
+                                Width="146"
+                                ItemsSource="{Binding Items}"
+                                SelectedItem="{Binding SelectedItem}"
+                                Text="{Binding NewItem, UpdateSourceTrigger=LostFocus}"/>
+
+
+                            <TextBlock Text="Warranty AMC : " Margin="20 4" FontSize="16" Foreground="DarkMagenta"/>
+                            <ComboBox 
+                                IsEditable="True" 
+                                Height="27" 
+                                Width="146"
+                                ItemsSource="{Binding Items}"
+                                SelectedItem="{Binding SelectedItem}"
+                                Text="{Binding NewItem, UpdateSourceTrigger=LostFocus}"/>
+
+                            <TextBlock Text="Deploy  : " Margin="20 4" FontSize="16" Foreground="DarkMagenta"/>
+                            <ComboBox 
+                                IsEditable="True" 
+                                Height="27" 
+                                Width="146"
+                                ItemsSource="{Binding Items}"
+                                SelectedItem="{Binding SelectedItem}"
+                                Text="{Binding NewItem, UpdateSourceTrigger=LostFocus}"/>
+                        </StackPanel>
+                        
+                        <StackPanel Orientation="Horizontal" Margin="10">
+
+                            <TextBlock Text="HostName : " Margin="4" FontSize="16" Foreground="DarkMagenta"/>
+                            <ComboBox 
+                                IsEditable="True" 
+                                Height="27" 
+                                Width="146"
+                                ItemsSource="{Binding Items}"
+                                SelectedItem="{Binding SelectedItem}"
+                                Text="{Binding NewItem, UpdateSourceTrigger=LostFocus}"/>
+
+                            <TextBlock Text="IP  : " Margin="20 4" FontSize="16" Foreground="DarkMagenta"/>
+                            <ComboBox 
+                                IsEditable="True" 
+                                Height="27" 
+                                Width="146"
+                                ItemsSource="{Binding Items}"
+                                SelectedItem="{Binding SelectedItem}"
+                                Text="{Binding NewItem, UpdateSourceTrigger=LostFocus}"/>
+
+
+                            <TextBlock Text="Status Information : " Margin="20 4" FontSize="16" Foreground="DarkMagenta"/>
+                            <ComboBox 
+                                IsEditable="True" 
+                                Height="27" 
+                                Width="146"
+                                ItemsSource="{Binding Items}"
+                                SelectedItem="{Binding SelectedItem}"
+                                Text="{Binding NewItem, UpdateSourceTrigger=LostFocus}"/>
+
+                        </StackPanel>
+                        <StackPanel Margin="20">
+                            <Button
+                                Content="SEND ADD REQUEST TO ADMIN"
+                                Style="{StaticResource MaterialDesignFlatLightBgButton}"
+                                />
+                        </StackPanel>
+
+
+                    </StackPanel>
+
+
+                </Grid>
+
+            </Grid>
+        </ScrollViewer>
     </Grid>
 </Page>

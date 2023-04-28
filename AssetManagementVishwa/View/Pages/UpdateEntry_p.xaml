@@ -2,14 +2,288 @@
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:AssetManagementVishwa.View.Pages"
+      xmlns:UpdateEntrymo="clr-namespace:AssetManagementVishwa.ViewModel"
       mc:Ignorable="d" 
+      Background="#f2e7e6"
       d:DesignHeight="450" d:DesignWidth="800"
       Title="UpdateEntry">
+    <Page.DataContext>
+        <UpdateEntrymo:UpdateEntry_vm/>
+    </Page.DataContext>
 
     <Grid>
-        <Button Content="UpdaEntry karo" HorizontalAlignment="Left" Margin="371,186,0,0" VerticalAlignment="Top"/>
+        <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
+            <StackPanel>
+                <TextBlock Text="Update Asset Form: " Margin="1" FontSize="24" FontWeight="Bold"/>
+                <Separator/>
+                <TextBlock  Text="Hardware Information*" FontWeight="DemiBold" FontSize="20"/>
+                <Separator/>
+                <StackPanel Margin="0 5 0 0">
+                    <StackPanel Orientation="Horizontal" Margin="10">
+                        <CheckBox Content="System Model  : " Margin="4" FontSize="16" Foreground="DarkMagenta"/>
+                        <ComboBox 
+                                IsEditable="True" 
+                                Height="27" 
+                                Width="146"
+                                ItemsSource="{Binding Items}"
+                                SelectedItem="{Binding SelectedItem}"
+                                Text="{Binding NewItem, UpdateSourceTrigger=LostFocus}"/>
 
+                        <CheckBox Content="System CPU  : " Margin="20 4" FontSize="16" Foreground="DarkMagenta"/>
+                        <ComboBox 
+                                IsEditable="True" 
+                                Height="27" 
+                                Width="146"
+                                ItemsSource="{Binding Items}"
+                                SelectedItem="{Binding SelectedItem}"
+                                Text="{Binding NewItem, UpdateSourceTrigger=LostFocus}"/>
+
+                        <CheckBox Content="System HDD  : " Margin="20 4" FontSize="16" Foreground="DarkMagenta"/>
+                        <ComboBox 
+                                IsEditable="True" 
+                                Height="27" 
+                                Width="146"
+                                ItemsSource="{Binding Items}"
+                                SelectedItem="{Binding SelectedItem}"
+                                Text="{Binding NewItem, UpdateSourceTrigger=LostFocus}"/>
+
+                        <CheckBox Content="System SDD  : " Margin="20 4" FontSize="16" Foreground="DarkMagenta"/>
+                        <ComboBox 
+                                IsEditable="True" 
+                                Height="27" 
+                                Width="146"
+                                ItemsSource="{Binding Items}"
+                                SelectedItem="{Binding SelectedItem}"
+                                Text="{Binding NewItem, UpdateSourceTrigger=LostFocus}"/>
+                    </StackPanel>
+
+                    <StackPanel 
+                            Orientation="Horizontal"
+                            Margin="10"
+                            >
+                        <CheckBox Content="System RAM    : " Margin="4" FontSize="16" Foreground="DarkMagenta"/>
+                        <ComboBox 
+                                IsEditable="True" 
+                                Height="27" 
+                                Width="146"
+                                ItemsSource="{Binding Items}"
+                                SelectedItem="{Binding SelectedItem}"
+                                Text="{Binding NewItem, UpdateSourceTrigger=LostFocus}"/>
+
+                    </StackPanel>
+                    <Separator/>
+                    <TextBlock  Text="Software Information*" FontWeight="DemiBold" FontSize="20"/>
+                    <StackPanel Orientation="Horizontal" Margin="10">
+
+                        <CheckBox Content="Server/Desktop : " Margin="4" FontSize="16" Foreground="DarkMagenta"/>
+                        <ComboBox 
+                                IsEditable="True" 
+                                Height="27" 
+                                Width="146"
+                                ItemsSource="{Binding Items}"
+                                SelectedItem="{Binding SelectedItem}"
+                                Text="{Binding NewItem, UpdateSourceTrigger=LostFocus}"/>
+
+                        <CheckBox Content="Pre Loaded OS : " Margin="20 4" FontSize="16" Foreground="DarkMagenta"/>
+                        <ComboBox 
+                                IsEditable="True" 
+                                Height="27" 
+                                Width="146"
+                                ItemsSource="{Binding Items}"
+                                SelectedItem="{Binding SelectedItem}"
+                                Text="{Binding NewItem, UpdateSourceTrigger=LostFocus}"/>
+
+
+                        <CheckBox Content="Runing OS : " Margin="20 4" FontSize="16" Foreground="DarkMagenta"/>
+                        <ComboBox 
+                                IsEditable="True" 
+                                Height="27" 
+                                Width="146"
+                                ItemsSource="{Binding Items}"
+                                SelectedItem="{Binding SelectedItem}"
+                                Text="{Binding NewItem, UpdateSourceTrigger=LostFocus}"/>
+
+                        <CheckBox Content="OFFICE  : " Margin="20 4" FontSize="16" Foreground="DarkMagenta"/>
+                        <ComboBox 
+                                IsEditable="True" 
+                                Height="27" 
+                                Width="146"
+                                ItemsSource="{Binding Items}"
+                                SelectedItem="{Binding SelectedItem}"
+                                Text="{Binding NewItem, UpdateSourceTrigger=LostFocus}"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Margin="10">
+
+                        <CheckBox Content="Visual Studio     : " Margin="4" FontSize="16" Foreground="DarkMagenta"/>
+                        <ComboBox 
+                                IsEditable="True" 
+                                Height="27" 
+                                Width="146"
+                                ItemsSource="{Binding Items}"
+                                SelectedItem="{Binding SelectedItem}"
+                                Text="{Binding NewItem, UpdateSourceTrigger=LostFocus}"/>
+
+                        <CheckBox Content="SQL   : " Margin="20 4" FontSize="16" Foreground="DarkMagenta"/>
+                        <ComboBox 
+                                IsEditable="True" 
+                                Height="27" 
+                                Width="146"
+                                ItemsSource="{Binding Items}"
+                                SelectedItem="{Binding SelectedItem}"
+                                Text="{Binding NewItem, UpdateSourceTrigger=LostFocus}"/>
+
+
+                        <CheckBox Content="W CAL : " Margin="20 4" FontSize="16" Foreground="DarkMagenta"/>
+                        <ComboBox 
+                                IsEditable="True" 
+                                Height="27" 
+                                Width="146"
+                                ItemsSource="{Binding Items}"
+                                SelectedItem="{Binding SelectedItem}"
+                                Text="{Binding NewItem, UpdateSourceTrigger=LostFocus}"/>
+
+                        <CheckBox Content="RDP  : " Margin="20 4" FontSize="16" Foreground="DarkMagenta"/>
+                        <ComboBox 
+                                IsEditable="True" 
+                                Height="27" 
+                                Width="146"
+                                ItemsSource="{Binding Items}"
+                                SelectedItem="{Binding SelectedItem}"
+                                Text="{Binding NewItem, UpdateSourceTrigger=LostFocus}"/>
+                    </StackPanel>
+
+                    <StackPanel Orientation="Horizontal" Margin="10">
+
+                        <CheckBox Content="SQL CAL   : " Margin="4" FontSize="16" Foreground="DarkMagenta"/>
+                        <ComboBox 
+                                IsEditable="True" 
+                                Height="27" 
+                                Width="146"
+                                ItemsSource="{Binding Items}"
+                                SelectedItem="{Binding SelectedItem}"
+                                Text="{Binding NewItem, UpdateSourceTrigger=LostFocus}"/>
+                    </StackPanel>
+                    <Separator/>
+
+                    <TextBlock  Text="System Information*" FontWeight="DemiBold" FontSize="20"/>
+                    <StackPanel Orientation="Horizontal" Margin="10">
+
+                        <CheckBox Content="Assign User : " Margin="4" FontSize="16" Foreground="DarkMagenta"/>
+                        <TextBox
+                                Height="27" 
+                                Width="146"
+                                Text="{Binding SysUser}"/>
+
+                        <CheckBox Content="Department : " Margin="20 4" FontSize="16" Foreground="DarkMagenta"/>
+                        <ComboBox 
+                                IsEditable="True" 
+                                Height="27" 
+                                Width="146"
+                                ItemsSource="{Binding Items}"
+                                SelectedItem="{Binding SelectedItem}"
+                                Text="{Binding NewItem, UpdateSourceTrigger=LostFocus}"/>
+                        <CheckBox Content="Status Information: " Margin="20 4" FontSize="16" Foreground="DarkMagenta"/>
+                        <ComboBox 
+                                IsEditable="True" 
+                                Height="27" 
+                                Width="146"
+                                ItemsSource="{Binding Items}"
+                                SelectedItem="{Binding SelectedItem}"
+                                Text="{Binding NewItem, UpdateSourceTrigger=LostFocus}"/>
+                        <CheckBox Content="Usage : " Margin="20 4" FontSize="16" Foreground="DarkMagenta"/>
+                        <ComboBox 
+                                IsEditable="True" 
+                                Height="27" 
+                                Width="146"
+                                ItemsSource="{Binding Items}"
+                                SelectedItem="{Binding SelectedItem}"
+                                Text="{Binding NewItem, UpdateSourceTrigger=LostFocus}"/>
+                    </StackPanel>
+
+                    <StackPanel Orientation="Horizontal" Margin="10">
+
+                        <CheckBox Content="Purchase Value : " Margin="4" FontSize="16" Foreground="DarkMagenta"/>
+                        <ComboBox 
+                                IsEditable="True" 
+                                Height="27" 
+                                Width="146"
+                                ItemsSource="{Binding Items}"
+                                SelectedItem="{Binding SelectedItem}"
+                                Text="{Binding NewItem, UpdateSourceTrigger=LostFocus}"/>
+
+                        <CheckBox Content="Purchase Year  : " Margin="20 4" FontSize="16" Foreground="DarkMagenta"/>
+                        <ComboBox 
+                                IsEditable="True" 
+                                Height="27" 
+                                Width="146"
+                                ItemsSource="{Binding Items}"
+                                SelectedItem="{Binding SelectedItem}"
+                                Text="{Binding NewItem, UpdateSourceTrigger=LostFocus}"/>
+
+
+                            <CheckBox Content="Warranty AMC : " Margin="20 4" FontSize="16" Foreground="DarkMagenta"/>
+                        <ComboBox 
+                                IsEditable="True" 
+                                Height="27" 
+                                Width="146"
+                                ItemsSource="{Binding Items}"
+                                SelectedItem="{Binding SelectedItem}"
+                                Text="{Binding NewItem, UpdateSourceTrigger=LostFocus}"/>
+
+                        <CheckBox Content="Deploy  : " Margin="20 4" FontSize="16" Foreground="DarkMagenta"/>
+                        <ComboBox 
+                                IsEditable="True" 
+                                Height="27" 
+                                Width="146"
+                                ItemsSource="{Binding Items}"
+                                SelectedItem="{Binding SelectedItem}"
+                                Text="{Binding NewItem, UpdateSourceTrigger=LostFocus}"/>
+                    </StackPanel>
+
+                    <StackPanel Orientation="Horizontal" Margin="10">
+
+                        <CheckBox Content="HostName : " Margin="4" FontSize="16" Foreground="DarkMagenta"/>
+                        <ComboBox 
+                                IsEditable="True" 
+                                Height="27" 
+                                Width="146"
+                                ItemsSource="{Binding Items}"
+                                SelectedItem="{Binding SelectedItem}"
+                                Text="{Binding NewItem, UpdateSourceTrigger=LostFocus}"/>
+
+                        <CheckBox Content="IP  : " Margin="20 4" FontSize="16" Foreground="DarkMagenta"/>
+                        <ComboBox 
+                                IsEditable="True" 
+                                Height="27" 
+                                Width="146"
+                                ItemsSource="{Binding Items}"
+                                SelectedItem="{Binding SelectedItem}"
+                                Text="{Binding NewItem, UpdateSourceTrigger=LostFocus}"/>
+
+
+                        <CheckBox Content="Status Information : " Margin="20 4" FontSize="16" Foreground="DarkMagenta"/>
+                        <ComboBox 
+                                IsEditable="True" 
+                                Height="27" 
+                                Width="146"
+                                ItemsSource="{Binding Items}"
+                                SelectedItem="{Binding SelectedItem}"
+                                Text="{Binding NewItem, UpdateSourceTrigger=LostFocus}"/>
+
+                    </StackPanel>
+                    <StackPanel Margin="20">
+                        <Button
+                                Content="SEND UPDATE REQUEST TO ADMIN"
+                                Style="{StaticResource MaterialDesignFlatLightBgButton}"
+                                />
+                    </StackPanel>
+
+
+                </StackPanel>
+            </StackPanel>
+        </ScrollViewer>
     </Grid>
 </Page>
