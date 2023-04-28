@@ -18,6 +18,17 @@
         <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
             <StackPanel>
                 <TextBlock Text="Update Asset Form: " Margin="1" FontSize="24" FontWeight="Bold"/>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                    <TextBlock Text="Asset Number of System : " Margin="4" FontSize="20" Foreground="DarkMagenta" FontWeight="Bold"/>
+                    <ComboBox 
+                                IsEditable="True" 
+                                Height="30" 
+                                Width="160"
+                                ItemsSource="{Binding Items}"
+                                SelectedItem="{Binding SelectedItem}"
+                                Text="{Binding NewItem, UpdateSourceTrigger=LostFocus}"/>
+                </StackPanel>
+
                 <Separator/>
                 <TextBlock  Text="Hardware Information*" FontWeight="DemiBold" FontSize="20"/>
                 <Separator/>

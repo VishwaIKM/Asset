@@ -9,5 +9,11 @@ namespace AssetManagementVishwa.Database
         {
         }
         public virtual DbSet<LoginModel> UserManagement { get; set; }
+
+        public virtual DbSet<AssetMainModel> AssetMain { get; set; }
+
+        public virtual DbSet<AssetTempModel> AssetTemp { get; set; }
+
+        public virtual DbSet<KeyGeneratorModel> KeyGenerator { get; set; }
     }
 }

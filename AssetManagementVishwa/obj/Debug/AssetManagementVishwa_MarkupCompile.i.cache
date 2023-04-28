@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\vishw\OneDrive\Documents\WORKSPACE\Asset\AssetManagementVishwa\obj\Debug\
+D:\WorkSpace\AssetManagement_VISHWA\AssetManagementVishwa\AssetManagementVishwa\obj\Debug\
 AssetManagementVishwa
 none
 false
 DEBUG;TRACE
-C:\Users\vishw\OneDrive\Documents\WORKSPACE\Asset\AssetManagementVishwa\App.xaml
+D:\WorkSpace\AssetManagement_VISHWA\AssetManagementVishwa\AssetManagementVishwa\App.xaml
 11-1876417380
 
-302135316748
-22-681893058
+33-977274868
+25-1828889776
 View\Landing_v.xaml;View\Loading_v.xaml;View\Login_v.xaml;View\Pages\AdminDashboard_p.xaml;View\Pages\Audit_p.xaml;View\Pages\Dashboard_p.xaml;View\Pages\NewEntry_p.xaml;View\Pages\Report_p.xaml;View\Pages\UpdateEntry_p.xaml;View\Testing.xaml;View\Testing1.xaml;
 
-True
+False
 

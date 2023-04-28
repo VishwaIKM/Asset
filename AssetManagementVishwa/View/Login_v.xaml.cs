@@ -19,9 +19,11 @@ namespace AssetManagementVishwa.View
     /// </summary>
     public partial class Login_v : Window
     {
+        private static log4net.ILog Log = log4net.LogManager.GetLogger(typeof(Login_v));
         public Login_v()
         {
             InitializeComponent();
+            Log.Debug("TEST");
         }
     }
 }

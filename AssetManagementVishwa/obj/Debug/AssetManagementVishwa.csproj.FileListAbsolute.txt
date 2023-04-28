@@ -116,3 +116,5 @@ C:\Users\vishw\OneDrive\Documents\WORKSPACE\Asset\AssetManagementVishwa\obj\Debu
 C:\Users\vishw\OneDrive\Documents\WORKSPACE\Asset\AssetManagementVishwa\obj\Debug\AssetManagementVishwa.csproj.CopyComplete
 C:\Users\vishw\OneDrive\Documents\WORKSPACE\Asset\AssetManagementVishwa\obj\Debug\AssetManagementVishwa.exe
 C:\Users\vishw\OneDrive\Documents\WORKSPACE\Asset\AssetManagementVishwa\obj\Debug\AssetManagementVishwa.pdb
+D:\WorkSpace\AssetManagement_VISHWA\AssetManagementVishwa\AssetManagementVishwa\bin\Debug\log4net.dll
+D:\WorkSpace\AssetManagement_VISHWA\AssetManagementVishwa\AssetManagementVishwa\bin\Debug\log4net.xml

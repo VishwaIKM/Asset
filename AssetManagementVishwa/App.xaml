@@ -1,9 +1,8 @@
 ﻿<Application x:Class="AssetManagementVishwa.App"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:local="clr-namespace:AssetManagementVishwa"
              xmlns:navpos="clr-namespace:AssetManagementVishwa.View.CustomControl"
-             StartupUri="View/Pages/UpdateEntry_p.xaml">
+             StartupUri="View/Login_v.xaml">
     <Application.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>

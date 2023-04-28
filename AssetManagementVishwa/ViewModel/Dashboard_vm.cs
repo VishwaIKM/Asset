@@ -19,24 +19,13 @@ namespace AssetManagementVishwa.ViewModel
         public event PropertyChangedEventHandler PropertyChanged;
 
         private RelayCommand edit_clickCommand;
-
-        public ICommand Edit_clickCommand
+        protected void OnPropertyChanged(string propertyName)
         {
-            get
+            var handler = this.PropertyChanged;
+            if (handler != null)
             {
-                if (edit_clickCommand == null)
-                {
-                    edit_clickCommand = new RelayCommand(Edit_click);
-                }
-
-                return edit_clickCommand;
+                handler(this, new PropertyChangedEventArgs(propertyName));
             }
-        }
-
-        private void Edit_click()
-        {
-            UpdateEntry_p _edit_page = new UpdateEntry_p();
-            
         }
         #endregion
     }

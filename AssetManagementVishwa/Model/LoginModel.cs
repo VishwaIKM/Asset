@@ -6,14 +6,14 @@ namespace AssetManagementVishwa.Model
     [Table("USR_MAIN")]
     public class LoginModel
     {
-        //[Key]
-        //[Required(ErrorMessage = "Please Enter UserId")]
-        //[Display(Name = "Please Enter UserId")]
+        [Key]
+        [Required(ErrorMessage = "Please Enter UserId")]
+        [Display(Name = "Please Enter UserId")]
         [Column("USR_ID",Order =0)]
         public string Id { get; set; }
 
-        //[Required(ErrorMessage = "Please Enter Password")]
-        //[Display(Name = "Please Enter Password")]
+        [Required(ErrorMessage = "Please Enter Password")]
+        [Display(Name = "Please Enter Password")]
         [Column("USR_NAME", Order = 1)]
         public string Name { get; set; }
         [Column("USR_PASSWORD", Order = 2)]

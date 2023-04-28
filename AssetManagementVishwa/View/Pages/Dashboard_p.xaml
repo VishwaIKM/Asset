@@ -106,7 +106,7 @@
                     </Grid>
                 </Grid>
 
-                <Grid Grid.Column="0" Grid.Row="1" Grid.RowSpan="2" Grid.ColumnSpan="2">
+                <Grid Grid.Column="0" Grid.Row="2" Grid.RowSpan="2" Grid.ColumnSpan="2">
                     <!--<lvc:PieChart Series="{Binding Series}"/>  LabelPoint="{Binding PointLabel}" -->
                     <lvc:PieChart Margin="7" LegendLocation="Bottom" DataClick="Chart_OnDataClick" Hoverable="False">
                         <lvc:PieChart.Series>
